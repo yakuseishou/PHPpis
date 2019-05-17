@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .cal {
+            font-size: 120%;
+            border: 6px solid rgb(133, 132, 132);
+            border-radius: 6px;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+
+<body>
+
+        <input class="cal" id="n1" type="number"></input>
+        <select class="cal" id="opera">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+            <option>%</option>
+        </select>
+        <input class="cal" id="n2" type="number"></input>
+        <input class="cal" id="enter" type="submit" value="Try me!"onclick="msg()"></input>
+        <script>
+                setInterval(function(){ alert("Please, use me..."); }, 30000);
+        </script>
+    <script type="text/javascript">
+        function msg() {
+            var n1 = document.getElementById('n1').value;
+            var index = document.getElementById("opera").selectedIndex;
+            var options = document.getElementById('opera').options;
+            var op = options[index].text;
+            var n2 = document.getElementById('n2').value;
+        
+            if (!n1 || !n2) {
+                alert ("Error :(");
+            }
+            else {
+                n1 = parseInt(n1);
+                n2 = parseInt(n2);
+                if (n1 < 0 || n2 < 0) {
+                    alert ("Error :(");
+                }
+                else {
+                    if (op == "+") {
+                        result = n1 + n2;
+                    }
+                    if (op == "-") {
+                        result = n1 - n2;
+                    }
+                    if (op == "*") {
+                        result = n1 * n2;
+                    }
+                    if (op == "/") {
+                        if (n2 == 0)
+                            result = "It's over 9000 !";
+                        else
+                            result = n1 / n2;
+                    }
+                    if (op == "%") {
+                        if (n2 == 0)
+                            result = "It's over 9000 !";
+                        else
+                            result = n1 % n2;
+                    }
+                    console.log(result);
+                    alert(result);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

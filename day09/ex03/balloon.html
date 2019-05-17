@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .cir {
+            width: 200px;
+            height: 200px;
+            background: red;
+            border-radius: 50%;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Balloon</title>
+</head>
+
+<body>
+
+    <div class="cir" id="cir"></div>
+    <script>
+
+        var cir = $("#cir").val();
+        $("#cir").click(expend);
+        $("#cir").mouseleave(shrik);
+        const colors = ["red", "green", "blue",];
+        let i = 0;
+
+        function expend() {
+            colorchange();
+            grow();
+        }
+        function colorchange() {
+            i++;
+            if (i > 2) {
+                i = 0;
+            }
+            $("#cir").css("background" , colors[i]);
+        }
+
+        function grow() {
+            if ($("#cir").width() >= 415) {
+                $("#cir").css("width", "200px");
+                $("#cir").css("height", "200px");
+            }
+            else {
+                $("#cir").css("width", $("#cir").width() + 10);
+                $("#cir").css("height", $("#cir").height() + 10);
+            }
+        }
+        
+        function shrik() {
+            colorchangeR();
+            growR();
+        }
+        function colorchangeR() {
+            i--;
+            if (i < 0)
+                i = 2
+            $("#cir").css("background", colors[i]);
+        }
+        function growR() {
+            if ($("#cir").width() <= 200) {
+                $("#cir").css("width", "200px");
+                $("#cir").css("height", "200px");
+            }
+            else {
+                $("#cir").css("width", $("#cir").width() - 5);
+                $("#cir").css("height", $("#cir").height() - 5);
+            }
+        }
+        </script>
+   
+</body>
+
+
+
+</html>

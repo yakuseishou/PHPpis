@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body {
+            margin: 0 auto;
+            background-color: black;
+        }
+        h1 {
+            margin: center;
+            color: white;
+        }
+        #ft_list {
+            margin: 0 auto;
+            padding: 5%;
+          
+        }
+        .newelem {
+            margin: 0 auto;
+            border: 2px solid rgb(132, 171, 243);
+            border-radius: 6px;
+            background-color: cornflowerblue;
+            color: white;
+            font-size: 240%;
+            padding: 2%;    
+        }
+        .button {
+            background-color: rgb(53, 52, 52);
+            color: white;
+            border: 3px solid rgb(46, 46, 46);
+            border-radius: 12px;
+            font-size: 240%;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="todo.js"></script>
+    <title>To Do</title>
+</head>
+<h1>To Do List</h1>
+
+<body>
+        <div id="ft_list"><script class="list" src="todo.js"></script></div>
+        <button class="button" id="submit" onclick="add_new(this)">New</button>
+   
+</body>
+
+</html>

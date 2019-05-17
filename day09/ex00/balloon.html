@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .cir {
+            width: 200px;
+            height: 200px;
+            background: red;
+            border-radius: 50%;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <title>Balloon</title>
+</head>
+
+<body>
+
+    <div class="cir" id="cir"></div>
+    <script type="application/javascript">
+
+        const cir = document.getElementById('cir');
+        cir.addEventListener("click", expend);
+        cir.addEventListener("mouseout", shrik);
+        const colors = ["red", "green", "blue",];
+        let i = 0;
+
+        function expend() {
+            colorchange();
+            grow();
+        }
+        function colorchange() {
+            i++;
+            if (i > 2)
+                i = 0;
+            cir.style.background = colors[i];
+        }
+
+        function grow() {
+            if (cir.clientWidth >= 415) {
+                cir.style.width = "200px";
+                cir.style.height = "200px";
+            }
+            else {
+                cir.style.width = cir.clientWidth + 10 + "px";
+                cir.style.height = cir.clientHeight + 10 + "px";
+            }
+        }
+        function shrik() {
+            colorchangeR();
+            growR();
+        }
+        function colorchangeR() {
+            i--;
+            if (i < 0)
+                i = 2
+            cir.style.background = colors[i];
+        }
+        function growR() {
+            if (cir.clientWidth <= 200) {
+                cir.style.width = "200px";
+                cir.style.height = "200px";
+            }
+            else {
+                cir.style.width = cir.clientWidth - 5 + "px";
+                cir.style.height = cir.clientHeight - 5 + "px";
+            }
+        }
+
+        </script>
+   
+</body>
+
+</html>
