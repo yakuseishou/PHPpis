@@ -1,0 +1,25 @@
+<- Vector ----------------------------------------------------------------------
+Mathematically, a vector is a quantity, defined by both magnitude and direction.
+For example, a vector could be illustrated by an 1 inch arrow pointing at a 30 
+degree angle. Another vector may be 2.5 inches and point at a 160 degree angle. 
+In the computer world, vectors are used to define paths in certain types of 
+images, such as EPS files and Adobe Illustrator documents. These images are 
+often called vector graphics since they are comprised of vectors, or paths, 
+instead of dots. Vector graphics can be scaled larger or smaller without l
+osing quality.
+
+In computer science, a vector may refer to a type of one dimensional array. 
+For example, a vector called "fibonacci" that stores the first six values of 
+the Fibonacci sequence would be defined as follows:
+
+fibonacci[0] = 0, fibonacci[1] = 1, fibonacci[2] = 1, fibonacci[3] = 2, 
+fibonacci[4] = 3, fibonacci[5] = 5
+
+Vectors are similar to arrays, but unlike arrays, vectors use their own memory 
+management mechanisms. Arrays are restricted to the memory structure supplied 
+by the programming language they are created in, typically called a stack. 
+Vectors have a more dynamic structure, often referred to as a heap, which gives 
+them greater flexibility in how they use memory. While an array uses a static 
+amount of memory, the memory used by the vector can be increased or decreased 
+as elements are added or removed from the vector.
+---------------------------------------------------------------------- Vector ->
